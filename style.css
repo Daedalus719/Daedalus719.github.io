@@ -254,12 +254,11 @@ th,td{
     border-radius: 3em;
     background-color: #ebebeb;
     transition: background-color 0.09s ease-in-out;
- position: relative;}
+	position: relative;
 &:active::after {
        background-color: #f2f2f2;
        padding-right: .8em;
-   }
-    
+ }}
    &::after {
       content: '';
       width: 2em; 
@@ -276,11 +275,8 @@ th,td{
       padding .3s ease, margin .3s ease;
       box-shadow: 2px 0px 5px 0 rgba(0,0,0,0.15);
   }
-
-
-
 input[type=checkbox].toggle-switch:checked {
-   background-color: #04AA6D;
+background-color: #04AA6D;}
    &:active::after {
       margin-left: -.8em;
    }
@@ -288,7 +284,7 @@ input[type=checkbox].toggle-switch:checked {
       left: 2em;
       background-color: #242424;
    }
-}
+
 
 .opts {
    color: #04AA6D;
