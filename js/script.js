@@ -92,8 +92,8 @@ $(document).ready(function(){
 $(document).ready(function dark() {
  
   $(".toggle-switch").on("click", function dark(event){
-     $(".article, .articleh, th, td, h1, .clock div").toggleClass("dark");
-     $(".article, .articleh, .th, td, h1, .clock div").toggleClass("active");   
+     $(".article, .articleh, caption, h1").toggleClass("dark");
+     $(".article, .articleh, caption, h1").toggleClass("active");   
  });
 });
 
