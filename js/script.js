@@ -7,6 +7,17 @@ function menu() {
   }
 }
 
+$(document).ready(function dropedMenu(){
+    $(document).on('click','.dropbtn',function(){
+        $('.dropbtn').not(this).next().removeClass('show');
+        $(this).next().toggleClass('show');
+    });
+    $(document).on('click',function(e){
+        if(!$(e.target).closest('.dropbtn').length)
+            $('.dropbtn').next().removeClass('show');
+    });    
+});
+
 
 function videoshow() {
   var x = document.getElementById("video");
