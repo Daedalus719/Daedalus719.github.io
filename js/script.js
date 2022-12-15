@@ -43,30 +43,36 @@ function validate(){
   
   var text;
   if(fname.length < 3){
-    text = "Please Enter valid First Name";
+    text = "Wpisz poprawne imię";
     error_message.innerHTML = text;
     return false;
   }
   if(lname.length < 3){
-    text = "Please Enter valid Last Name";
+    text = "Wpisz poprawne nazwisko";
     error_message.innerHTML = text;
     return false;
   }
   if(email.indexOf("@") == -1 || email.length < 6){
-    text = "Please Enter valid Email";
+    text = "Wpisz poprawny adres Email";
     error_message.innerHTML = text;
     return false;
   }
-  if(message.length <= 40){
-    text = "Please Enter More Than 40 Characters";
+  if(message.length <= 10){
+    text = "Wpisz więcej niż 15 znaków";
     error_message.innerHTML = text;
     return false;
   }
-  alert("Form Submitted Successfully!");
+  alert("Wiadomość wysłana pomyślnie!");
   return true;
 }
 
-
+var x = window.matchMedia("(max-width: 600px)")
+background(x) 
+x.addListener(background) 
+function background(x) {
+  if (x.matches) {
+	 $("#dvImage").css("background-image", "url(pic/backgroundphone.jpg)") 
+  } else {
 var images = ["ac130.jpg", "a10aa.jpg", "b1a.jpg", "b2.jpeg", "background.jpg", "background1.jpg", "background2.jpg", "background3.jpg", "background4.jpg", "c5a.jpg", "f22_raptor.jpg", "uh60.webp"];
     $(function () {
         var i = 0;
@@ -82,7 +88,7 @@ var images = ["ac130.jpg", "a10aa.jpg", "b1a.jpg", "b2.jpeg", "background.jpg", 
             });
         }, 60000);
     });
-
+  }}
 
 
 

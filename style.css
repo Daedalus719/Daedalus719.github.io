@@ -8,7 +8,6 @@ a{
 	text-decoration:none;
 }
 #dvImage{
-  background-image: url("pic/background1.jpg");	
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -141,9 +140,6 @@ button.dropbtn.active {
   .maincontent h1{
    margin-left:1%;
   font-size:25px;
-  }
-   body{
-	  background-image:url("pic/backgroundphone.jpg");
   }
   .maincontent .container{
   margin-left:0%;
