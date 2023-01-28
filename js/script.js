@@ -33,37 +33,37 @@ function videoshow() {
 }
 
 function validate(){
-  var fname = document.getElementById("fname").value;
-  var lname = document.getElementById("lname").value;
+  var imie = document.getElementById("imie").value;
+  var nazwisko = document.getElementById("nazwisko").value;
   var email = document.getElementById("email").value;
-  var message = document.getElementById("message").value;
-  var error_message = document.getElementById("error_message");
+  var tresc = document.getElementById("tresc").value;
+  var error_tresc = document.getElementById("error_tresc");
   
-  error_message.style.padding = "10px";
+  error_tresc.style.padding = "10px";
   
   var text;
-  if(fname.length < 3){
+  if(imie.length < 3){
     text = "Wpisz poprawne imię";
-    error_message.innerHTML = text;
+    error_tresc.innerHTML = text;
     return false;
   }
-  if(lname.length < 3){
+  if(nazwisko.length < 3){
     text = "Wpisz poprawne nazwisko";
-    error_message.innerHTML = text;
+    error_tresc.innerHTML = text;
     return false;
   }
   if(email.indexOf("@") == -1 || email.length < 6){
     text = "Wpisz poprawny adres Email";
-    error_message.innerHTML = text;
+    error_tresc.innerHTML = text;
     return false;
   }
-  if(message.length <= 10){
+  if(tresc.length <= 10){
     text = "Wpisz więcej niż 15 znaków";
-    error_message.innerHTML = text;
+    error_tresc.innerHTML = text;
     return false;
   }
-  alert("Wiadomość wysłana pomyślnie!");
-  return true;
+  //alert("Wiadomość wysłana pomyślnie!");
+  //return true;
 }
 
 var x = window.matchMedia("(max-width: 600px)")
@@ -193,3 +193,45 @@ function shake(t) {
     t.removeClass('shake-constant');
   }, 470)
 }
+
+// Get the modal
+var modal = document.getElementById("Sign_modal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("openForm");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+
+/*login form*/
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('login_container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
